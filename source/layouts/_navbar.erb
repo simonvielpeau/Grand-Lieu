@@ -1,0 +1,31 @@
+<div class="navbar">
+
+  <div class="navbar-left">
+    <% link_to "/index.html", class: "navbar-a" do %>
+      <img src="<%= dato.global.logo.url(fm: :png) %>" alt="Logo Grand Lieu" class="navbar-logo">
+      <div class="navbar-left-content">
+        <h1><%= dato.navbar.title %></h1>
+        <p><%= dato.navbar.description %></p>
+      </div>
+    <%end%>
+  </div>
+
+  <div class="navbar-right">
+      <ul class="navbar-right-link">
+        <% dato.navbar.links.each do |link| %>
+          <li><%= link_to link.text, link.page %></li>
+        <%end%>
+      </ul>
+   </div>
+
+    <div class="dropdown-nav visible-xs visible-sm">
+    <i onclick="myFunction()" class="dropbtn fa fa-bars"></i>
+      <div id="myDropdown-isa" class="dropbtn-content">
+        <% dato.navbar.links.each do |link| %>
+          <li><%= link_to link.text, link.page %></li>
+        <%end%>
+      </div>
+    </div>
+
+
+</div>

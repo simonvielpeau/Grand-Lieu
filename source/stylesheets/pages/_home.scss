@@ -1,0 +1,125 @@
+.home-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img{
+    width: 240px;
+    border: 3px solid $blue;
+  }
+}
+
+.logo-partenaires{
+  text-align: center;
+  width: 100%;
+}
+.logo-partenaires img{
+  width: 500px;
+}
+
+.little-banner{
+  background-color: $dark-gray;
+}
+
+.contact-content {
+  // Requis
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 1px 5px 0s;
+  justify-content: center;
+
+  padding: 30px;
+
+  // Les logos
+  i{
+    font-size: 22px;
+  }
+
+  // Les h3
+  h3{
+    font-size: 20px;
+
+    // Margin séparant du <p> ainsi que du <i>
+    margin: 10px 0px;
+  }
+
+  // Les p
+  p{
+    font-size: 16px;
+
+    // Margin du bas
+    margin: 0px 0px;
+  }
+
+  .rubrique{
+    text-align: center;
+  }
+
+}
+
+// L'arrière plan
+.wrapper-contact{
+
+  // La taille : full screen - banner - navbar
+  height: 230px;
+
+  // Requis
+  background-color: $dark-gray;
+
+  display: flex;
+  align-items: center;
+
+  border-top: 2px solid $blue;
+  border-bottom: 2px solid $blue;
+}
+
+
+.bi-container{
+  display: flex;
+  align-items: center;
+}
+
+
+.box{
+  background-color: $light-gray;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px;
+  .box-texte{
+    display: flex;
+    align-items: center;
+  }
+  .box-image{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+.boxs img{
+  width: 400px;
+}
+
+
+
+.wrapper-homebas{
+  height: 150px;
+  background-color: $dark-gray;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid $blue;
+  border-bottom: 2px solid $blue;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+

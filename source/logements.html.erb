@@ -1,0 +1,31 @@
+---
+title: Logements | Résidence Autonomie Claude Vielpeau
+---
+
+<div class="logement-container containers container">
+  <%= dato.logement.type_logements %>
+</div>
+
+<div class="logement-type containers container">
+  <div>
+    <%= dato.logement.txttype1 %>
+  </div>
+  <img src="<%=dato.logement.imgtype1.url(fm: :png)%>" alt="">
+</div>
+<div class="logement-type containers container">
+  <div>
+    <%= dato.logement.txttype2 %>
+  </div>
+  <img src="<%=dato.logement.imgtype2.url(fm: :png)%>" alt="">
+</div>
+<div class="logement-type containers container">
+  <div>
+    <%= dato.logement.txttype3 %>
+  </div>
+   <img src="<%=dato.logement.imgtype3.url(fm: :png)%> alt="">
+</div>
+
+<div class="plans-container containers container">
+  <%= dato.logement.description %>
+</div>
+

@@ -1,0 +1,10 @@
+.logement-type{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img{
+    width: 300px;
+    margin-left: 20px;
+    border: 3px solid $blue;
+  }
+}

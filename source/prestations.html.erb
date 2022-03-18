@@ -1,0 +1,34 @@
+---
+title: Prestations | Résidence Autonomie Claude Vielpeau
+---
+
+<div class="containers container">
+  <div><%= dato.prestation.presentation %></div>
+</div>
+
+<div class="prestation-container containers container">
+  <div>
+    <%= dato.prestation.securite %>
+  </div>
+  <img src="<%=dato.prestation.imgsecurite.url(fm: :png)%>" alt="">
+</div>
+
+<div class="prestation-container containers container">
+  <div><%= dato.prestation.animation %></div>
+  <img src="<%=dato.prestation.imganimation.url(fm: :png)%>" alt="">
+</div>
+
+<div class="prestation-container containers container">
+  <div><%= dato.prestation.restauration %></div>
+  <img src="<%=dato.prestation.imgrestauration.url(fm: :png)%>" alt="">
+</div>
+
+<div class="prestation-container containers container">
+   <div><%= dato.prestation.linge %></div>
+  <img src="<%=dato.prestation.imglinge.url(fm: :png)%>" alt="">
+</div>
+
+<div class="prestation-container containers container">
+   <div><%= dato.prestation.menage %></div>
+  <img src="<%=dato.prestation.imgmenage.url(fm: :png)%>" alt="">
+</div>

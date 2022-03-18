@@ -2,15 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <html lang="fr">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="<%= data.title.description %>" />
+    <meta name="keywords" content="<%= data.title.keywords %>" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <title><%= current_page.data.title %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= favicon_tag dato.global.favicon.url(w:50,h:50,fm: :png) %>
   </head>
   <body>
+
+    <!--[if lte IE 8]><div class="alert-ie8">Vous utilisez un navigateur trop ancien, merci de le mettre &agrave; jour afin de pouvoir naviguer sur le site.</div><![endif]-->
+
+    <%= partial "layouts/navbar" %>
     <%= yield %>
+    <%= partial "layouts/footer" %>
+
+
+    <!-- PHOTOSWIPE -->
+
+    <link rel="stylesheet" href="../dist/photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="../dist/default-skin/default-skin.css">
+    <script src="../dist/photoswipe.min.js"></script>
+    <script src="../dist/photoswipe-ui-default.min.js"></script>
+
+
+    <%= javascript_include_tag "application" %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>

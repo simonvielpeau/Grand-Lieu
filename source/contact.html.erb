@@ -1,0 +1,27 @@
+---
+title: Contact | Résidence Autonomie Claude Vielpeau
+---
+
+<div class="containers container">
+  <div><%= dato.contact.texte_introductif%></div>
+</div>
+
+<div class="container containers">
+  <form
+    action="https://formspree.io/f/mbjwgwqg"
+    method="POST"
+  >
+    <label>
+      Votre adresse-mail :
+      <input type="email" name="_replyto">
+    </label>
+    <label>
+      Votre message :
+      <textarea name="message"></textarea>
+    </label>
+    <!-- your other form fields go here -->
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</div>
+
+<br style="margin-bottom: 200px;">

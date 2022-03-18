@@ -5,45 +5,38 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-# Layouts
-# https://middlemanapp.com/basics/layouts/
 
-# Per-page layout changes
+
+set :relative_links, true
+
+
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+  activate :relative_assets
+  activate :minify_html, remove_input_attributes: false
+  activate :sitemap, hostname: "domainname.com"
+end
 
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
+activate :directory_indexes
+activate :gzip
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.deploy_method = :git
+end
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
+[].each do |type|
+  proxy "/association/#{type}.html", "/association/show.html", locals: { type: type }, ignore: true
+end
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
-
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
-
-
-activate :livereload
+activate :dato, live_reload: true
+# enable livereload on development
+configure :development do
+  activate :livereload
+end
