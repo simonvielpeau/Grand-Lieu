@@ -1,0 +1,1 @@
+function myFunction(){document.getElementById("myDropdown-isa").classList.toggle("show-isa")}window.onclick=function(o){if(!o.target.matches(".dropbtn")){var t,n=document.getElementsByClassName("dropbtn-contect");for(t=0;t<n.length;t++){var s=n[t];s.classList.contains("dropdown-show")&&s.classList.remove("dropdown-show")}}};
