@@ -20,3 +20,5 @@ gem 'middleman-google-analytics', '~> 3.0'
 gem "middleman-dato", '~> 0.10.0'
 
 gem "middleman-livereload", "~> 3.4.3"
+
+gem 'middleman-google-analytics', '~> 3.0'
