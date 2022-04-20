@@ -43,5 +43,5 @@ end
 
 # config.rb
 activate :google_analytics do |ga|
-  ga.tracking_id = ' UA-123578627-3' # Replace with your property ID.
+  ga.tracking_id = 'UA-123578627-3' # Replace with your property ID.
 end
